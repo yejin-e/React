@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      border: solid 1px black;
+    }
+
+    .contents {
+      display: flex;
+      flex-direction: column;
+      width: 100dvw;
+      height: 100dvh;
+      gap: 10px;
+    }
+
+    .Header {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+    }
+
+    .HeaderBlank{
+      display: flex;
+      flex: 10;
+    }
+
+    .HeaderContents {
+      width: 52px;
+    }
+
+    .Google {
+      
+      flex: 2;
+      justify-content: center;
+    }
+
+    .Search {
+      flex: 1;
+    }
+
+    .Shortcut {
+      flex: 3;
+    }
+
+    .Blank {
+      flex: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="contents">
+    <div class="Header">
+      <div class="HeaderBlank"></div>
+      <div class="HeaderContents" id="Gamil">
+        Gamil
+      </div>
+      <div class="HeaderContents" id="Image">
+        Image
+      </div>
+      <div class="HeaderContents" id="Lab">
+        Lab
+      </div>
+      <div class="HeaderContents" id="Menu">
+        Menu
+      </div>
+      <div class="HeaderContents" id="User">
+        User
+      </div>
+    </div>
+
+    <div class="Google">
+      Google
+    </div>
+
+    <div class="Search">
+      Search
+    </div>
+
+    <div class="Shortcut">
+      Shortcut
+    </div>
+
+    <div class="Blank">
+      Blank
+    </div>
+  </div>
+
+</body>
+
+
+</html>
