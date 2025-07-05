@@ -2,100 +2,250 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    div {
-      border: solid 1px black;
-    }
+        /*div {*/
+        /*    border: solid 1px black;*/
+        /*}*/
 
-    .contents {
-      display: flex;
-      flex-direction: column;
-      width: 100dvw;
-      height: 100dvh;
-      gap: 10px;
-    }
+        hr {
+            background: lightgray;
+            height:1px;
+            border:0;
+        }
 
-    .Header {
-      display: flex;
-      flex-direction: row;
-      flex: 1;
-    }
+        .contents {
+            display: flex;
+            flex-direction: column;
+            width: 100dvw;
+            height: 100dvh;
+            font-size: 15px;
+        }
 
-    .HeaderBlank{
-      display: flex;
-      flex: 10;
-    }
+        .Header {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            justify-content: space-between; /* 자식 요소를 가로(수평) 기준으로 양 옆으로 정렬시킴 */
+            align-items: center; /* 자식 요소를 세로(수직) 기준으로 가운데 정렬시킴 */
+        }
 
-    .HeaderContents {
-      width: 52px;
-    }
+        .HeaderContents{
+            display: flex;
+            flex-direction: row;
+            margin: 0 5px 0 20px; /* 상우하좌 */
+            gap: 15px;
+            align-items: center;
+        }
 
-    .Google {
-      
-      flex: 2;
-      justify-content: center;
-    }
+        #Menu {
+            width: 20px;
+            height: 20px;
+            background-color: gray;
+        }
 
-    .Search {
-      flex: 1;
-    }
+        #Login {
+            border: solid 1px darkgray;
+            background-color: royalblue;
+            border-radius: 30px;
+            color: white;
+            padding: 10px;
+            width: 90px;
+        }
 
-    .Shortcut {
-      flex: 3;
-    }
+        .Google {
+            flex: 6;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
 
-    .Blank {
-      flex: 1;
-    }
-  </style>
+        .GoogleContents{
+            display: flex;
+            font-size: 80px;
+            width: max-content;  /* 해당 요소가 담고 있는 컨텐츠의 최대 너비 */
+        }
+
+        #Alphabet1, #Alphabet4 { color: #4285F4; }
+        #Alphabet2, #Alphabet6 { color: #DB4437; }
+        #Alphabet3 { color: #F4B400; }
+        #Alphabet5 { color: #0F9D58; }
+
+        .Search {
+            display: flex;
+            flex: 2;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .SearchContents{
+            width: 600px;
+            height: 5dvb;
+            min-width: 100px;
+            border: solid 1px darkgray;
+            border-radius: 30px;
+            margin: 15px;
+        }
+
+        #TextContents{
+            margin: 0 30px;
+            padding: 10px 10px 10px 10px;
+            height: 100%;    /* 부모 기준 퍼센트 */
+            width: 75%;
+            border: none;   /* 버튼 테두리 제거 */
+            outline: none;  /* 버튼 클릭시 생기는 테두리 제거 */
+        }
+
+        .Tag {
+            flex: 8;
+        }
+
+        .TagContents {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .Contents {
+            background-color: whitesmoke;
+            padding: 10px;
+
+        }
+
+        .Footer {
+            display: flex;
+            flex-direction: column;
+            flex: 2;
+            background-color: whitesmoke;
+        }
+
+        #Country {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            padding-left: 20px;
+        }
+
+        .DownFooter {
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+            flex-wrap: wrap;    /* 줄넘김 */
+            align-items: center;
+
+            padding: 0 30px;
+        }
+
+        .FooterContents {
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="contents">
+<div class="contents">
     <div class="Header">
-      <div class="HeaderBlank"></div>
-      <div class="HeaderContents" id="Gamil">
-        Gamil
-      </div>
-      <div class="HeaderContents" id="Image">
-        Image
-      </div>
-      <div class="HeaderContents" id="Lab">
-        Lab
-      </div>
-      <div class="HeaderContents" id="Menu">
-        Menu
-      </div>
-      <div class="HeaderContents" id="User">
-        User
-      </div>
+            <div class="HeaderContents">
+                <div id="About">
+                    Google 정보
+                </div>
+                <div id="Store">
+                    스토어
+                </div>
+            </div>
+
+            <div class="HeaderContents">
+                <div id="Gmail">
+                    Gmail
+                </div>
+                <div id="Image">
+                    이미지
+                </div>
+                <div>
+                    <div id="Menu">
+                    </div>
+                </div>
+                <div>
+                    <button type="button" id="Login">
+                        로그인
+                    </button>
+                </div>
+            </div>
     </div>
 
     <div class="Google">
-      Google
+        <div class="GoogleContents">
+            <div id="Alphabet1">G</div>
+            <div id="Alphabet2">o</div>
+            <div id="Alphabet3">o</div>
+            <div id="Alphabet4">g</div>
+            <div id="Alphabet5">l</div>
+            <div id="Alphabet6">e</div>
+        </div>
     </div>
 
     <div class="Search">
-      Search
+        <div class="SearchContents">
+            <input id="TextContents" type="text">
+        </div>
     </div>
 
-    <div class="Shortcut">
-      Shortcut
+    <div class="Tag">
+        <div class="TagContents">
+            <div class="Contents">
+                Google 검색
+            </div>
+            <div class="Contents">
+                I'm Feeling Lucky
+            </div>
+        </div>
     </div>
 
-    <div class="Blank">
-      Blank
+    <div class="Footer">
+        <div id="Country">
+            대한민국
+        </div>
+
+        <hr />      <!-- 구분선 -->
+
+        <div class="DownFooter">
+            <div class="FooterContents">
+                <div id="Advertising">
+                    광고
+                </div>
+                <div id="Business">
+                    비즈니스
+                </div>
+                <div id="Principle">
+                    검색의 원리
+                </div>
+            </div>
+
+            <div class="FooterContents">
+                <div id="Policy">
+                    개인정보처리방침
+                </div>
+                <div id="Terms">
+                    약관
+                </div>
+                <div id="Setting">
+                    설정
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
 
 </body>
 
