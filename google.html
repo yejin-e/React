@@ -12,9 +12,9 @@
             padding: 0;
         }
 
-        /*div {*/
-        /*    border: solid 1px black;*/
-        /*}*/
+        div {
+            /*border: solid 1px black;*/
+        }
 
         hr {
             background: lightgray;
@@ -25,9 +25,8 @@
         .contents {
             display: flex;
             flex-direction: column;
-            width: 100dvw;
             height: 100dvh;
-            font-size: 15px;
+            font-size: 13px;
         }
 
         .Header {
@@ -47,9 +46,10 @@
         }
 
         #Menu {
+            display: flex;
             width: 20px;
             height: 20px;
-            background-color: gray;
+            margin: 0 5px;
         }
 
         #Login {
@@ -62,7 +62,9 @@
         }
 
         .Google {
-            flex: 6;
+            /*flex: 5;*/
+            flex-basis: auto;
+            flex-grow: 2;
             display: flex;
             justify-content: center;
             align-items: flex-end;
@@ -87,17 +89,52 @@
         }
 
         .SearchContents{
+            display: flex;
+            flex-direction: row;
             width: 600px;
             height: 5dvb;
             min-width: 100px;
             border: solid 1px darkgray;
             border-radius: 30px;
             margin: 15px;
+            padding: 0 15px;
+            gap: 15px;
         }
 
-        #TextContents{
-            margin: 0 30px;
-            padding: 10px 10px 10px 10px;
+        .Magnifier {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Keyboard {
+            display: flex;
+        }
+
+        .Mic {
+            display: flex;
+        }
+
+        .Camera {
+            display: flex;
+        }
+
+        img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25px;
+        }
+
+        button {
+            cursor : pointer;
+            background-color: white;
+            border: 0;
+            outline: none;
+        }
+
+        .TextContents{
+            display: flex;
             height: 100%;    /* 부모 기준 퍼센트 */
             width: 75%;
             border: none;   /* 버튼 테두리 제거 */
@@ -156,32 +193,31 @@
 <body>
 <div class="contents">
     <div class="Header">
-            <div class="HeaderContents">
-                <div id="About">
-                    Google 정보
-                </div>
-                <div id="Store">
-                    스토어
-                </div>
+        <div class="HeaderContents">
+            <div id="About">
+                Google 정보
             </div>
+            <div id="Store">
+                스토어
+            </div>
+        </div>
 
-            <div class="HeaderContents">
-                <div id="Gmail">
-                    Gmail
-                </div>
-                <div id="Image">
-                    이미지
-                </div>
-                <div>
-                    <div id="Menu">
-                    </div>
-                </div>
-                <div>
-                    <button type="button" id="Login">
-                        로그인
-                    </button>
-                </div>
+        <div class="HeaderContents">
+            <div id="Gmail">
+                Gmail
             </div>
+            <div id="Image">
+                이미지
+            </div>
+            <div id="Menu">
+                <img src="/image/menu.png" alt="메뉴">
+            </div>
+            <div>
+                <button type="button" id="Login">
+                    로그인
+                </button>
+            </div>
+        </div>
     </div>
 
     <div class="Google">
@@ -197,7 +233,25 @@
 
     <div class="Search">
         <div class="SearchContents">
-            <input id="TextContents" type="text">
+            <div class="Magnifier" >
+                <img src="/image/magnifier.png" alt="돋보기">
+            </div>
+            <input class="TextContents" type="text">
+            <div class="Keyboard">
+                <button type="button" >
+                    <img src="/image/keyboard.png" alt="키보드">
+                </button>
+            </div>
+            <div class="Mic">
+                <button type="button" >
+                    <img src="/image/mic.png" alt="마이크">
+                </button>
+            </div>
+            <div class="Camera">
+                <button type="button" >
+                    <img src="/image/camera.png" alt="카메라">
+                </button>
+            </div>
         </div>
     </div>
 
