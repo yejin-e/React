@@ -35,12 +35,13 @@
             flex-direction: row;
             justify-content: space-between; /* 자식 요소를 가로(수평) 기준으로 양 옆으로 정렬시킴 */
             align-items: center; /* 자식 요소를 세로(수직) 기준으로 가운데 정렬시킴 */
+            padding: 10px;
         }
 
         .HeaderContents{
             display: flex;
             flex-direction: row;
-            margin: 0 5px 0 20px; /* 상우하좌 */
+            padding: 0 0 0 20px; /* 상우하좌 */
             gap: 15px;
             align-items: center;
         }
@@ -62,10 +63,8 @@
         }
 
         .Google {
-            /*flex: 5;*/
-            flex-basis: auto;
-            flex-grow: 2;
             display: flex;
+            flex: 5;
             justify-content: center;
             align-items: flex-end;
         }
@@ -73,6 +72,7 @@
         .GoogleContents{
             display: flex;
             font-size: 80px;
+            font-weight: bold;
             width: max-content;  /* 해당 요소가 담고 있는 컨텐츠의 최대 너비 */
         }
 
@@ -92,13 +92,14 @@
             display: flex;
             flex-direction: row;
             width: 600px;
-            height: 5dvb;
+            height: 4dvb;
             min-width: 100px;
-            border: solid 1px darkgray;
+            border: solid 1px whitesmoke;   
             border-radius: 30px;
             margin: 15px;
             padding: 0 15px;
             gap: 15px;
+            box-shadow: 0px 8px 6px -10px #666;
         }
 
         .Magnifier {
@@ -117,20 +118,20 @@
 
         .Camera {
             display: flex;
+            align-items: center;
         }
 
         img {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 25px;
+            width: 20px;
         }
 
         button {
             cursor : pointer;
             background-color: white;
             border: 0;
-            outline: none;
         }
 
         .TextContents{
@@ -142,7 +143,7 @@
         }
 
         .Tag {
-            flex: 8;
+            flex: 15;
         }
 
         .TagContents {
@@ -210,7 +211,7 @@
                 이미지
             </div>
             <div id="Menu">
-                <img src="/image/menu.png" alt="메뉴">
+                <img src="./image/menu.png" alt="메뉴">
             </div>
             <div>
                 <button type="button" id="Login">
@@ -234,22 +235,22 @@
     <div class="Search">
         <div class="SearchContents">
             <div class="Magnifier" >
-                <img src="/image/magnifier.png" alt="돋보기">
+                <img src="./image/magnifier.png" alt="돋보기">
             </div>
             <input class="TextContents" type="text">
             <div class="Keyboard">
-                <button type="button" >
-                    <img src="/image/keyboard.png" alt="키보드">
+                <button type="button">
+                    <img src="./image/keyboard.png" alt="키보드">
                 </button>
             </div>
             <div class="Mic">
-                <button type="button" >
-                    <img src="/image/mic.png" alt="마이크">
+                <button type="button">
+                    <img src="./image/mic.png" alt="마이크">
                 </button>
             </div>
             <div class="Camera">
-                <button type="button" >
-                    <img src="/image/camera.png" alt="카메라">
+                <button type="button">
+                    <img src="./image/camera.png" alt="카메라">
                 </button>
             </div>
         </div>
