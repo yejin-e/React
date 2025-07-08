@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>musinsa_main</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		/*div {*/
+		/*  border: solid 1px black;*/
+		/*}*/
+
+		body {
+			width: 1440px;
+			font-size: 14px;
+			margin: 0 auto;
+		}
+
+		span {
+			margin: 5px;
+		}
+
+		button {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background-color: white;
+			position: fixed;
+			top: 93dvh;
+			left: 84dvw;
+		}
+
+		svg {
+			width: 28px;
+			height: 28px;
+		}
+
+		input {
+			width: 97%;
+			height: 36px;
+			border-radius: 5px;
+		}
+
+		nav {
+			height: 50px;
+			width: 1440px;
+			display: flex;
+			/*justify-content: space-between;*/
+			/*align-items: center;*/
+			position: fixed;
+			top: 0;
+		}
+
+		header {
+			margin: 50px 0 0;
+			width: 1440px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.black {
+			background-color: black;
+			color: white;
+
+
+		}
+
+		.position {
+			position: sticky;
+			top: 50px;
+		}
+
+		.list {
+			height: 36px;
+			padding: 15px 10px 35px;
+		}
+
+		.space-between {
+			margin: 0;
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			/*align-items: center;*/
+			justify-content: flex-end;
+		}
+
+		main {
+			height: 200dvh;
+			background-color: whitesmoke;
+		}
+
+		footer {
+			background-color: lightgray;
+		}
+
+	</style>
+</head>
+<body>
+<script>
+	function buttonFunction() {
+		window.scroll({
+			top: 0,
+			left: 0,
+			behavior: 'smooth'
+		});
+	}
+</script>
+
+<nav class="black">
+	<div class="space-between">
+		<div class="left">
+			<!-- 	viewBox: 시작 x, y, w, h
+					fill: 내부를 채울 색상
+					xmlns: 이 코드가 SVG 규칙에 따라 작성됨을 알려줌
+					내부 좌표 (v.x, v.y) ~ (v.w, v.h)가 width * height 크리고 보임
+			-->
+			<span>
+			<svg class="svg_list" width="28" height="28" viewBox="0 0 28 28" fill="none"
+				 xmlns="http://www.w3.org/2000/svg">
+				  <!-- 	fill-rule: 겹침/구멍에서 채울 영역 규칙
+						clip-rule: 클리핑(잘라내기) 영역에서 안쪽을 정하는 규칙
+						d: 도형 그리기
+						fill: 도형 채우기 색상
+						fill-opacity: 채우기 색 투명도
+				  -->
+				  <path d="M4 8.70005H8V7.30005H4V8.70005ZM4 15.2H8V13.8H4V15.2ZM4 21.7H8V20.3H4V21.7ZM10 8.70005H24V7.30005H10V8.70005ZM10 15.2H24V13.8H10V15.2ZM10 21.7H24V20.3H10V21.7Z"
+						fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" fill-opacity="0.8">
+				  </path>
+			</svg>
+		</span>
+			<span> MUSINSA </span>
+			<span> BEAUTY </span>
+			<span> PLAYER </span>
+			<span> OUTLET </span>
+			<span> BOUTIQUE </span>
+			<span> SHOES </span>
+			<span> KIDS </span>
+			<span> (S)SNAP </span>
+		</div>
+
+		<div class="right">
+			<span> 오프라인 스토어 </span>
+			<span> 검색 </span>
+			<span> 좋아요 </span>
+			<span> 마이 </span>
+			<span> 장바구니 </span>
+		</div>
+	</div>
+</nav>
+
+<header class="black">
+	<div class="space-between">
+		<div>
+			<h1> MUSINSA </h1>
+		</div>
+		<div>
+			<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 20 20" fill="none"
+				 class="size-7"
+				 data-mds="IcBoldAlarm">
+				<path d="M13 14C13 15.6569 11.6569 17 10 17C8.34315 17 7 15.6569 7 14M5 8C5 5.23858 7.23858 3 10 3C12.7614 3 15 5.23858 15 8V11.8C15 12.3511 15.6222 12.8998 16.2458 13.3115C16.517 13.4904 16.3927 14 16.0678 14H3.93217C3.60727 14 3.48302 13.4904 3.75417 13.3115C4.37778 12.8998 5 12.3511 5 11.8V8Z"
+					  stroke-width="1.4" stroke="#FFFFFF" data-mds="IcBoldAlarm" vector-effect="non-scaling-stroke">
+				</path>
+			</svg>
+		</div>
+	</div>
+	<input>
+</header>
+
+<main>
+	<div class="black position">
+		<div class="list">
+			<span> 콘텐츠 </span>
+			<span> 추천 </span>
+			<span> 랭킹 </span>
+			<span> 세일 </span>
+			<span> 브랜드 </span>
+			<span> 발매 </span>
+			<span> SPA 특가 </span>
+			<span> 아디다스 </span>
+		</div>
+	</div>
+</main>
+
+<footer>
+	<div class="up">
+		<span> MUSINSA </span>
+		<span> BEAUTY </span>
+		<span> PLAYER </span>
+		<span> OUTLET </span>
+		<span> SHOES </span>
+		<span> BOUTIQUE </span>
+		<span> KIDS </span>
+	</div>
+	<div class="down">
+		<p> 사업자 정보 </p>
+		<p> 법적 고지사항 </p>
+		<p> 파트너 지원 </p>
+		<p> 고객 지원 </p>
+		<p> 브랜드 </p>
+		<p> © MUSINSA ALL RIGHTS RESERVED </p>
+	</div>
+	<button onclick="buttonFunction()">
+		<svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+			<path d="M7.69995 16.8L13.7878 10.7121C13.905 10.595 14.0949 10.595 14.2121 10.7121L20.3 16.8"
+				  stroke="black" stroke-width="1.4"></path>
+		</svg>
+	</button>
+</footer>
+</body>
+</html>
