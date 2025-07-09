@@ -10,10 +10,6 @@
 			padding: 0;
 		}
 
-		/*div {*/
-		/*  border: solid 1px black;*/
-		/*}*/
-
 		body {
 			width: 1440px;
 			font-size: 14px;
@@ -21,7 +17,12 @@
 		}
 
 		span {
-			margin: 5px;
+			padding: 0 10px;
+		}
+
+		div {
+			display: flex;
+			align-items: center;
 		}
 
 		button {
@@ -29,6 +30,7 @@
 			height: 40px;
 			border-radius: 50%;
 			background-color: white;
+			border: none;
 			position: fixed;
 			top: 93dvh;
 			left: 84dvw;
@@ -39,18 +41,24 @@
 			height: 28px;
 		}
 
+		hr {
+			margin: 10px 0;
+		}
+
 		input {
 			width: 97%;
-			height: 36px;
-			border-radius: 5px;
+			/*width: 40px;*/
+			height: 30px;
+			/*border-radius: 5px;*/
+			margin: auto;
+			border: none;   /* 버튼 테두리 제거 */
+			outline: none;  /* 버튼 클릭시 생기는 테두리 제거 */
 		}
 
 		nav {
 			height: 50px;
 			width: 1440px;
 			display: flex;
-			/*justify-content: space-between;*/
-			/*align-items: center;*/
 			position: fixed;
 			top: 0;
 		}
@@ -62,11 +70,24 @@
 			flex-direction: column;
 		}
 
-		.black {
+		main {
+			height: 100dvh;
+			background-color: whitesmoke;
+		}
+
+		footer {
+			background-color: lightgray;
+			padding: 10px;
+		}
+
+		footer > div > span {
+			margin: 7px 0;
+		}
+
+		.white {
+			width: 1440px;
 			background-color: black;
 			color: white;
-
-
 		}
 
 		.position {
@@ -74,29 +95,39 @@
 			top: 50px;
 		}
 
+		.line {
+			border-left: 1px solid white;
+		}
+
 		.list {
-			height: 36px;
-			padding: 15px 10px 35px;
+			padding: 10px;
 		}
 
 		.space-between {
-			margin: 0;
 			width: 100%;
 			display: flex;
-			flex-direction: row;
-			/*align-items: center;*/
-			justify-content: flex-end;
+			justify-content: space-between;
 		}
 
-		main {
-			height: 200dvh;
-			background-color: whitesmoke;
+		.logo {
+			padding: 10px 20px;
 		}
 
-		footer {
-			background-color: lightgray;
+		.input-text {
+			width: 97%;
+			height: 35px;
+			border-radius: 5px;
+			background-color: white;
+			display: flex;
+			justify-content: center;
+			margin: 0 auto;
 		}
 
+		.down {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
 	</style>
 </head>
 <body>
@@ -110,7 +141,7 @@
 	}
 </script>
 
-<nav class="black">
+<nav class="white">
 	<div class="space-between">
 		<div class="left">
 			<!-- 	viewBox: 시작 x, y, w, h
@@ -119,7 +150,7 @@
 					내부 좌표 (v.x, v.y) ~ (v.w, v.h)가 width * height 크리고 보임
 			-->
 			<span>
-			<svg class="svg_list" width="28" height="28" viewBox="0 0 28 28" fill="none"
+			<svg width="28" height="28" viewBox="0 0 28 28" fill="none"
 				 xmlns="http://www.w3.org/2000/svg">
 				  <!-- 	fill-rule: 겹침/구멍에서 채울 영역 규칙
 						clip-rule: 클리핑(잘라내기) 영역에서 안쪽을 정하는 규칙
@@ -132,7 +163,7 @@
 				  </path>
 			</svg>
 		</span>
-			<span> MUSINSA </span>
+			<span class="line"> MUSINSA </span>
 			<span> BEAUTY </span>
 			<span> PLAYER </span>
 			<span> OUTLET </span>
@@ -144,7 +175,7 @@
 
 		<div class="right">
 			<span> 오프라인 스토어 </span>
-			<span> 검색 </span>
+			<span class="line"> 검색 </span>
 			<span> 좋아요 </span>
 			<span> 마이 </span>
 			<span> 장바구니 </span>
@@ -152,26 +183,33 @@
 	</div>
 </nav>
 
-<header class="black">
-	<div class="space-between">
+<header class="white">
+	<div class="space-between logo">
 		<div>
-			<h1> MUSINSA </h1>
+			<h3> MUSINSA </h3>
 		</div>
 		<div>
-			<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 20 20" fill="none"
-				 class="size-7"
-				 data-mds="IcBoldAlarm">
+			<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 20 20" fill="#000000" data-mds="IcBoldAlarm">
 				<path d="M13 14C13 15.6569 11.6569 17 10 17C8.34315 17 7 15.6569 7 14M5 8C5 5.23858 7.23858 3 10 3C12.7614 3 15 5.23858 15 8V11.8C15 12.3511 15.6222 12.8998 16.2458 13.3115C16.517 13.4904 16.3927 14 16.0678 14H3.93217C3.60727 14 3.48302 13.4904 3.75417 13.3115C4.37778 12.8998 5 12.3511 5 11.8V8Z"
 					  stroke-width="1.4" stroke="#FFFFFF" data-mds="IcBoldAlarm" vector-effect="non-scaling-stroke">
 				</path>
 			</svg>
 		</div>
 	</div>
-	<input>
+	<div class="input-text">
+		<input placeholder="핫한 신상 라인업 슈즈위크">
+		<svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" data-mds="IcSearch">
+			<path d="M12 12L16.5 16.5M13.5 8.5C13.5 11.2614 11.2614 13.5 8.5 13.5C5.73858 13.5 3.5 11.2614 3.5 8.5C3.5 5.73858 5.73858 3.5 8.5 3.5C11.2614 3.5 13.5 5.73858 13.5 8.5Z"
+				  stroke="#000000" data-mds="IcSearch" vector-effect="non-scaling-stroke">
+			</path>
+		</svg>
+	</div>
+
+
 </header>
 
 <main>
-	<div class="black position">
+	<div class="white position">
 		<div class="list">
 			<span> 콘텐츠 </span>
 			<span> 추천 </span>
@@ -195,13 +233,15 @@
 		<span> BOUTIQUE </span>
 		<span> KIDS </span>
 	</div>
+	<hr>
 	<div class="down">
-		<p> 사업자 정보 </p>
-		<p> 법적 고지사항 </p>
-		<p> 파트너 지원 </p>
-		<p> 고객 지원 </p>
-		<p> 브랜드 </p>
-		<p> © MUSINSA ALL RIGHTS RESERVED </p>
+		<span> 사업자 정보 </span>
+		<span> 법적 고지사항 </span>
+		<span> 파트너 지원 </span>
+		<span> 고객 지원 </span>
+		<span> 브랜드 </span>
+		<br>
+		<span> © MUSINSA ALL RIGHTS RESERVED </span>
 	</div>
 	<button onclick="buttonFunction()">
 		<svg width="28" height="28" viewBox="0 0 28 28" fill="none">
