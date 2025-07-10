@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 100dvw;
+        height: 300dvh;
+        background-color: green;
+        padding: 50px;
+      }
+      .container {
+        background-color: beige;
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        border-radius: 12px;    
+      }
+      .box1 {
+        background-color: red;
+        position: absolute; /* relative 기준에서 변경 */
+        top: 0;
+        left: 0;
+      }
+      .box2 {
+        background-color: blue;
+        position: relative; /* 원래 위치에서 변경 */
+        left: 100px;
+        
+      }
+      .box3 {
+        background-color: orange;
+        position: fixed;  /* 사용자 화면 기준 고정 */
+        right: 0;
+        bottom: 0;
+      }
+      .box4 {
+        background-color: yellow;
+        position: sticky;  /* 일정 이상이면 고정 */
+        top: 0;
+      }
+      .box5 {
+        background-color: purple;
+        position: sticky; 
+        top: 30px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box1"></div>
+      <div class="box box2"></div>
+      <div class="box box3"></div>
+      <div class="box box4"></div>
+      <div class="box box5"></div>
+    </div>
+  </body>
+</html>
